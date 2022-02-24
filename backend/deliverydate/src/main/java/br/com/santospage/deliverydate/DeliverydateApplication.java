@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DeliveryDateApplication {
+public class DeliverydateApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DeliveryDateApplication.class, args);
+		SpringApplication.run(DeliverydateApplication.class, args);
 	}
 
 }
