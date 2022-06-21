@@ -1,4 +1,7 @@
+import { Branch } from './../models/branch.model';
 import { Component, OnInit } from '@angular/core';
+
+import { BranchService } from '../services/branch.service';
 
 @Component({
   selector: 'app-filters',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
 
-  constructor() { }
+  branchList: Branch[] = [];
+
+  constructor(private branchService: BranchService) {}
 
   ngOnInit(): void {
+    this.branchService.GelAllBranches().subscribe((branches: Branch[]) => {
+      this.branchList = branches;
+    });
   }
 
 }

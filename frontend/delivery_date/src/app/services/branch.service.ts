@@ -14,11 +14,7 @@ export class BranchService {
   constructor(private httpClient: HttpClient) {
     this.listaBranches = [];
   }
-
-  get branches(): any[] {
-    return this.listaBranches;
-  }
-
+  
   GelAllBranches(): Observable<Branch[]> {
     return this.httpClient.get<Branch[]>(this.url);
   }

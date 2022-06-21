@@ -4,20 +4,14 @@
 
     <div class="form-field">
       <label class="form-field__label" for="filialde">Filial Inicial</label>
-        <select class="form-field__input" name="filialde">
-        <option value="filial"></option>
-        <option value="d mg 01">D MG 01</option>
-        <option value="m sp 01">M SP 01</option>
-        <option value="d rj 02">D RJ 01</option>
+      <select class="form-field__input" name="filialde">
+        <option *ngFor="let branch of branchList" [value]="branch">{{branch.code+'-'+branch.description}}</option>
       </select>
     </div>
     <div class="form-field">
       <label class="form-field__label" for="filialde">Filial Final</label>
-        <select class="form-field__input" name="filialate">
-        <option value="filial">ZZZZZZZZ</option>
-        <option value="d mg 01">D MG 01</option>
-        <option value="m sp 01">M SP 01</option>
-        <option value="d rj 01">D RJ 01</option>
+      <select class="form-field__input" name="filialate">
+        <option *ngFor="let branch of branchList" [value]="branch">{{branch.code+'-'+branch.description}}</option>
       </select>
     </div>
     <div class="form-field">
