@@ -17,20 +17,14 @@
     <div class="form-field">
       <label class="form-field__label" for="pedidode">Pedido Inicial</label>
         <select class="form-field__input" name="pedidode">
-        <option value="pedido"></option>
-        <option value="000001">000001</option>
-        <option value="000002">000002</option>
-        <option value="000003">000003</option>
-      </select>
+          <option *ngFor="let order of orderList" [value]="order">{{order.branch+'-'+order.code}}</option>
+        </select>
     </div>
     <div class="form-field">
       <label class="form-field__label" for="pedidoate">Pedido Final</label>
         <select class="form-field__input" name="pedidoate">
-        <option value="pedido">ZZZZZZ</option>
-        <option value="000001">000001</option>
-        <option value="000002">000002</option>
-        <option value="000003">000003</option>
-      </select>
+          <option *ngFor="let order of orderList" [value]="order">{{order.branch+'-'+order.code}}</option>
+        </select>
     </div>
     <div class="form-field">
       <label class="form-field__label" for="datade">Data Inicial</label>

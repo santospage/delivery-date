@@ -1,7 +1,8 @@
-import { Branch } from './../models/branch.model';
 import { Component, OnInit } from '@angular/core';
 
-import { BranchService } from '../services/branch.service';
+import { HttpService } from '../services/http.service';
+import { Branch } from './../models/branch.model';
+import { Order } from './../models/order.model';
 
 @Component({
   selector: 'app-filters',
@@ -11,12 +12,17 @@ import { BranchService } from '../services/branch.service';
 export class FiltersComponent implements OnInit {
 
   branchList: Branch[] = [];
+  orderList: Order[] = [];
 
-  constructor(private branchService: BranchService) {}
+  constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
-    this.branchService.GelAllBranches().subscribe((branches: Branch[]) => {
+    this.httpService.GelAllBranches('branch').subscribe((branches: Branch[]) => {
       this.branchList = branches;
+    });
+
+    this.httpService.GelAllOrders('order').subscribe((orders: Order[]) => {
+      this.orderList = orders;
     });
   }
 

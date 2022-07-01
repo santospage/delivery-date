@@ -30,7 +30,7 @@ public class OrderModel {
 		return this.r_e_c_n_o_;
 	}
 		
-	public String getOrder() {
+	public String getCode() {
 		return this.c5_num.trim();
 	}
 		
