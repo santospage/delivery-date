@@ -10,7 +10,6 @@ import { Order } from './../models/order.model';
   styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
-
   branchList: Branch[] = [];
   orderList: Order[] = [];
 
@@ -25,5 +24,4 @@ export class FiltersComponent implements OnInit {
       this.orderList = orders;
     });
   }
-
 }
