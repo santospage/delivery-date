@@ -3,23 +3,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
-
-import { FiltersComponent } from './filters/filters.component';
+import { FiltersModule } from './filters/filters.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FiltersComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    FiltersModule
   ],
   providers: [
   ],

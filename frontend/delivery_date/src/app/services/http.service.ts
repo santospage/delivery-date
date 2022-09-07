@@ -14,11 +14,11 @@ export class HttpService {
   constructor(private httpClient: HttpClient) {
   }
 
-  GelAllBranches(api: string): Observable<Branch[]> {
+  GetAllBranches(api: string): Observable<Branch[]> {
     return this.httpClient.get<Branch[]>(`${this.url}/${api}`);
   }
 
-  GelAllOrders(api: string): Observable<Order[]> {
+  GetAllOrders(api: string): Observable<Order[]> {
     return this.httpClient.get<Order[]>(`${this.url}/${api}`);
   }
 }

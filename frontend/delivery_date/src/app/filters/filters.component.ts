@@ -16,11 +16,11 @@ export class FiltersComponent implements OnInit {
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
-    this.httpService.GelAllBranches('branch').subscribe((branches: Branch[]) => {
+    this.httpService.GetAllBranches('branch').subscribe((branches: Branch[]) => {
       this.branchList = branches;
     });
 
-    this.httpService.GelAllOrders('order').subscribe((orders: Order[]) => {
+    this.httpService.GetAllOrders('order').subscribe((orders: Order[]) => {
       this.orderList = orders;
     });
   }
